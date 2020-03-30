@@ -219,7 +219,7 @@ public class MixinExtension {
         
         this.project.afterEvaluate {
             // Gather reobf jars for processing
-            proj.reobf.each { reobfTaskHandle ->
+            proj.reobfJar.each { reobfTaskHandle ->
                 this.reobfTasks += new ReobfTask(proj, reobfTaskHandle)
             }
 
