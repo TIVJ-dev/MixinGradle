@@ -68,6 +68,7 @@ public class MixinGradlePlugin implements Plugin<Project> {
      * @param project Project to validate
      */
     private void checkEnvironment(Project project) {
+        /*
         if (project.tasks.findByName('genSrgs')) {
             throw new InvalidUserDataException("Found a 'genSrgs' task on $project, this version of MixinGradle does not support ForgeGradle 2.x.")
         }
@@ -75,6 +76,7 @@ public class MixinGradlePlugin implements Plugin<Project> {
         if (!project.extensions.findByName('minecraft')) {
             throw new InvalidUserDataException("Could not find property 'minecraft' on $project, ensure ForgeGradle is applied.")
         }
+        */
     }
     
 }
