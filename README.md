@@ -2,6 +2,9 @@
 
 **MixinGradle** is a [Gradle](http://gradle.org/) plugin which simplifies the build-time complexity of working with the **[SpongePowered Mixin](https://github.com/SpongePowered/Mixin)** framework for Java. It currently only supports usage with **[ForgeGradle](https://github.com/MinecraftForge/ForgeGradle)**.
 
+### This fork
+What is this fork for? This fork is intended for use with the [Hyperium client](https://github.com/HyperiumClient/Hyperium)'s addon development for versions 1.3 and up. This fork makes it possible to generate refmaps Mixin based addons. Previously [ForgeGradle](https://github.com/MinecraftForge/ForgeGradle) and [MixinGradle](https://github.com/SpongePowered/MixinGradle) did the job, but in version 1.3, Hyperium will/has move from ForgeGradle to [MCGradle](https://github.com/AmpTheDev/MCGradle).
+
 ### Features
 
 **MixinGradle** automates the following tasks:
