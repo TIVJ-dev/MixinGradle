@@ -302,7 +302,7 @@ public class MixinExtension {
      * Getter for reobfSrgFile, fetch from the <tt>genSrgs</tt> task if not configured
      */
     Object getMappings() {
-        this.reobfSrgFile != null ? project.file(this.reobfSrgFile) : project.tasks.generateMappings.outputs.files[0]
+        this.reobfSrgFile != null ? project.file(this.reobfSrgFile) : project.tasks.generateMappings.srgExcFile
     }
     
     /**
