@@ -302,7 +302,7 @@ public class MixinExtension {
      * Getter for reobfSrgFile, fetch from the <tt>genSrgs</tt> task if not configured
      */
     Object getMappings() {
-        this.reobfSrgFile != null ? project.file(this.reobfSrgFile) : project.tasks.createMcpToSrg.outputs.files[0]
+        this.reobfSrgFile != null ? project.file(this.reobfSrgFile) : project.tasks.generateMappings.outputs.files[0]
     }
     
     /**
@@ -479,9 +479,9 @@ public class MixinExtension {
         set.ext.refMapFile = refMapFile
         compileTask.ext.refMap = set.ext.refMap.toString()
 
-        // We need createMcpToSrg to run in order to generate the mappings
+        // We need ~~createMcpToSrg~~ generateMappings to run in order to generate the mappings
         // consumed by the AP        
-        compileTask.dependsOn("createMcpToSrg")
+        compileTask.dependsOn("generateMappings")
         
         // Closure to prepare AP environment before compile task runs
         compileTask.doFirst {
